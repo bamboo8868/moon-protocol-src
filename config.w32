@@ -1,0 +1,7 @@
+ARG_ENABLE('moon', 'moon support', 'no');
+
+if (PHP_MOON != 'no') {
+	AC_DEFINE('HAVE_MOON', 1, 'moon support enabled');
+
+	EXTENSION('moon', 'moon.c', null, '/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1');
+}
